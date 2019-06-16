@@ -7,18 +7,20 @@
   
   <title>前后端接口对接 | Readying handler</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="记录一些自己感觉好的文章 在前后端开发中经常会遇到词不达意，如下图所示 避免我设计的接口和别人调用的接口 !( https://mmbiz.qpic.cn/mmbiz_gif/O0xtFGCiaLmtcueE2xYDfmjMzwo7CNNLSQJOjoyTHbvzWtxRibG7qlS9nlY558S9PnmjqWjq3w9QuDDMK9PL6dlg/640?wx_fmt=gif&amp;amp;tp=w">
+  <meta name="description" content="记录一些自己感觉好的文章 在前后端开发中经常会遇到词不达意，如下图所示 避免我设计的接口和别人调用的接口   接口URL必须简单  见明知意 尽量使单个英文，如果必要的话采用驼峰法， 不建议用拼音    接口类型与业务操作相匹配   方法恰当     新增 POST 修改 PUT 查询 GET 删除 DELETE   传递参数恰当    统一的返回结构（一般为JSON） 避免多个多个系统的范围接口">
 <meta name="keywords" content="java">
 <meta property="og:type" content="article">
 <meta property="og:title" content="前后端接口对接">
 <meta property="og:url" content="http://yoursite.com/2019/06/16/前后端接口设计的一些原则/index.html">
 <meta property="og:site_name" content="Readying handler">
-<meta property="og:description" content="记录一些自己感觉好的文章 在前后端开发中经常会遇到词不达意，如下图所示 避免我设计的接口和别人调用的接口 !( https://mmbiz.qpic.cn/mmbiz_gif/O0xtFGCiaLmtcueE2xYDfmjMzwo7CNNLSQJOjoyTHbvzWtxRibG7qlS9nlY558S9PnmjqWjq3w9QuDDMK9PL6dlg/640?wx_fmt=gif&amp;amp;tp=w">
+<meta property="og:description" content="记录一些自己感觉好的文章 在前后端开发中经常会遇到词不达意，如下图所示 避免我设计的接口和别人调用的接口   接口URL必须简单  见明知意 尽量使单个英文，如果必要的话采用驼峰法， 不建议用拼音    接口类型与业务操作相匹配   方法恰当     新增 POST 修改 PUT 查询 GET 删除 DELETE   传递参数恰当    统一的返回结构（一般为JSON） 避免多个多个系统的范围接口">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-06-16T04:10:16.960Z">
+<meta property="og:image" content="https://mmbiz.qpic.cn/mmbiz_gif/O0xtFGCiaLmtcueE2xYDfmjMzwo7CNNLSQJOjoyTHbvzWtxRibG7qlS9nlY558S9PnmjqWjq3w9QuDDMK9PL6dlg/640?wx_fmt=gif&tp=webp&wxfrom=5&wx_lazy=1">
+<meta property="og:updated_time" content="2019-06-16T04:11:57.299Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="前后端接口对接">
-<meta name="twitter:description" content="记录一些自己感觉好的文章 在前后端开发中经常会遇到词不达意，如下图所示 避免我设计的接口和别人调用的接口 !( https://mmbiz.qpic.cn/mmbiz_gif/O0xtFGCiaLmtcueE2xYDfmjMzwo7CNNLSQJOjoyTHbvzWtxRibG7qlS9nlY558S9PnmjqWjq3w9QuDDMK9PL6dlg/640?wx_fmt=gif&amp;amp;tp=w">
+<meta name="twitter:description" content="记录一些自己感觉好的文章 在前后端开发中经常会遇到词不达意，如下图所示 避免我设计的接口和别人调用的接口   接口URL必须简单  见明知意 尽量使单个英文，如果必要的话采用驼峰法， 不建议用拼音    接口类型与业务操作相匹配   方法恰当     新增 POST 修改 PUT 查询 GET 删除 DELETE   传递参数恰当    统一的返回结构（一般为JSON） 避免多个多个系统的范围接口">
+<meta name="twitter:image" content="https://mmbiz.qpic.cn/mmbiz_gif/O0xtFGCiaLmtcueE2xYDfmjMzwo7CNNLSQJOjoyTHbvzWtxRibG7qlS9nlY558S9PnmjqWjq3w9QuDDMK9PL6dlg/640?wx_fmt=gif&tp=webp&wxfrom=5&wx_lazy=1">
   
     <link rel="alternate" href="/atom.xml" title="Readying handler" type="application/atom+xml">
   
@@ -93,7 +95,7 @@
       
         <p>记录一些自己感觉好的文章</p>
 <h2 id="在前后端开发中经常会遇到词不达意，如下图所示"><a href="#在前后端开发中经常会遇到词不达意，如下图所示" class="headerlink" title="在前后端开发中经常会遇到词不达意，如下图所示"></a>在前后端开发中经常会遇到词不达意，如下图所示</h2><p> <strong>避免我设计的接口和别人调用的接口</strong></p>
-<p>!( <a href="https://mmbiz.qpic.cn/mmbiz_gif/O0xtFGCiaLmtcueE2xYDfmjMzwo7CNNLSQJOjoyTHbvzWtxRibG7qlS9nlY558S9PnmjqWjq3w9QuDDMK9PL6dlg/640?wx_fmt=gif&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1" target="_blank" rel="noopener">https://mmbiz.qpic.cn/mmbiz_gif/O0xtFGCiaLmtcueE2xYDfmjMzwo7CNNLSQJOjoyTHbvzWtxRibG7qlS9nlY558S9PnmjqWjq3w9QuDDMK9PL6dlg/640?wx_fmt=gif&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1</a> ‘’图片title’’)</p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_gif/O0xtFGCiaLmtcueE2xYDfmjMzwo7CNNLSQJOjoyTHbvzWtxRibG7qlS9nlY558S9PnmjqWjq3w9QuDDMK9PL6dlg/640?wx_fmt=gif&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1" alt="呵呵" title="&#39;图片title&#39;"></p>
 <ol>
 <li><p>接口URL必须简单</p>
 <p> <strong>见明知意</strong></p>
@@ -135,7 +137,7 @@ EG:{
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/06/16/前后端接口设计的一些原则/" data-id="cjwyfm0k00003dsthtwhlhpvk" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/06/16/前后端接口设计的一些原则/" data-id="cjwyfo6zx0003rcthq8tgipmp" class="article-share-link">Share</a>
       
       
     </footer>
