@@ -15,7 +15,7 @@
 <meta property="og:site_name" content="Readying handler">
 <meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. MySQL">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-06-16T04:01:50.381Z">
+<meta property="og:updated_time" content="2019-06-16T04:02:04.236Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Sql 优化准则">
 <meta name="twitter:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. MySQL">
@@ -93,7 +93,7 @@
       
         <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
 <h2 id="MySQL数据库"><a href="#MySQL数据库" class="headerlink" title="MySQL数据库"></a>MySQL数据库</h2><h3 id="limit-1-的使用"><a href="#limit-1-的使用" class="headerlink" title="limit 1 的使用"></a>limit 1 的使用</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ select name from user <span class="built_in">where</span> id = <span class="string">"23"</span> <span class="built_in">limit</span> 1</span><br></pre></td></tr></table></figure>
-<h3 id="避免使用-select"><a href="#避免使用-select" class="headerlink" title="避免使用 select *"></a>避免使用 select *</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$  使用 count(1) 或者 count(列) 代替 count(*)</span><br></pre></td></tr></table></figure>
+<h3 id="避免使用-select-count"><a href="#避免使用-select-count" class="headerlink" title="避免使用 select  / count "></a>避免使用 select <em> / count </em></h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$  使用 count(1) 或者 count(列) 代替 count(*)</span><br></pre></td></tr></table></figure>
 <h3 id="创建索引但无法命中的几种情况"><a href="#创建索引但无法命中的几种情况" class="headerlink" title="创建索引但无法命中的几种情况"></a>创建索引但无法命中的几种情况</h3><ol>
 <li><p>使用函数</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ select name from user <span class="built_in">where</span> reverse(name) = <span class="string">'sanzhang'</span></span><br></pre></td></tr></table></figure>
@@ -112,7 +112,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/04/13/SQL 优化准则/" data-id="cjwyfb4xy0000p0th0d9v5yvk" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/04/13/SQL 优化准则/" data-id="cjwyfbu3a0001g0thlu4rlilz" class="article-share-link">Share</a>
       
       
     </footer>
