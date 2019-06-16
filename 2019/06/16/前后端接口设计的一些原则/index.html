@@ -7,18 +7,18 @@
   
   <title>前后端接口对接的一些注意事项 | Readying handler</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="记录一些自己感觉好的文章 ##   接口URL必须简单  见明知意 尽量使单个英文，如果必要的话采用驼峰法， 不建议用拼音    接口类型与业务操作相匹配  新增 POST 修改 PUT 查询 GET 删除 DELETE    统一的返回结构（一般为JSON） 避免多个多个系统的范围接口不同，给前端对接造成一定的麻烦。  EG:{     &amp;quot;code&amp;quot;: 2000,     &amp;">
+  <meta name="description" content="记录一些自己感觉好的文章 在前后端开发中经常会遇到词不达意 接口URL必须简单  见明知意 尽量使单个英文，如果必要的话采用驼峰法， 不建议用拼音    接口类型与业务操作相匹配   方法恰当     新增 POST 修改 PUT 查询 GET 删除 DELETE   传递参数恰当    统一的返回结构（一般为JSON） 避免多个多个系统的范围接口不同，给前端对接造成一定的麻烦。  EG:{">
 <meta name="keywords" content="java">
 <meta property="og:type" content="article">
 <meta property="og:title" content="前后端接口对接的一些注意事项">
 <meta property="og:url" content="http://yoursite.com/2019/06/16/前后端接口设计的一些原则/index.html">
 <meta property="og:site_name" content="Readying handler">
-<meta property="og:description" content="记录一些自己感觉好的文章 ##   接口URL必须简单  见明知意 尽量使单个英文，如果必要的话采用驼峰法， 不建议用拼音    接口类型与业务操作相匹配  新增 POST 修改 PUT 查询 GET 删除 DELETE    统一的返回结构（一般为JSON） 避免多个多个系统的范围接口不同，给前端对接造成一定的麻烦。  EG:{     &amp;quot;code&amp;quot;: 2000,     &amp;">
+<meta property="og:description" content="记录一些自己感觉好的文章 在前后端开发中经常会遇到词不达意 接口URL必须简单  见明知意 尽量使单个英文，如果必要的话采用驼峰法， 不建议用拼音    接口类型与业务操作相匹配   方法恰当     新增 POST 修改 PUT 查询 GET 删除 DELETE   传递参数恰当    统一的返回结构（一般为JSON） 避免多个多个系统的范围接口不同，给前端对接造成一定的麻烦。  EG:{">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-06-16T03:48:33.947Z">
+<meta property="og:updated_time" content="2019-06-16T03:53:55.728Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="前后端接口对接的一些注意事项">
-<meta name="twitter:description" content="记录一些自己感觉好的文章 ##   接口URL必须简单  见明知意 尽量使单个英文，如果必要的话采用驼峰法， 不建议用拼音    接口类型与业务操作相匹配  新增 POST 修改 PUT 查询 GET 删除 DELETE    统一的返回结构（一般为JSON） 避免多个多个系统的范围接口不同，给前端对接造成一定的麻烦。  EG:{     &amp;quot;code&amp;quot;: 2000,     &amp;">
+<meta name="twitter:description" content="记录一些自己感觉好的文章 在前后端开发中经常会遇到词不达意 接口URL必须简单  见明知意 尽量使单个英文，如果必要的话采用驼峰法， 不建议用拼音    接口类型与业务操作相匹配   方法恰当     新增 POST 修改 PUT 查询 GET 删除 DELETE   传递参数恰当    统一的返回结构（一般为JSON） 避免多个多个系统的范围接口不同，给前端对接造成一定的麻烦。  EG:{">
   
     <link rel="alternate" href="/atom.xml" title="Readying handler" type="application/atom+xml">
   
@@ -92,8 +92,7 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>记录一些自己感觉好的文章</p>
-<p>## </p>
-<ol>
+<h2 id="在前后端开发中经常会遇到词不达意"><a href="#在前后端开发中经常会遇到词不达意" class="headerlink" title="在前后端开发中经常会遇到词不达意"></a>在前后端开发中经常会遇到词不达意</h2><ol>
 <li><p>接口URL必须简单</p>
 <p> <strong>见明知意</strong></p>
 <pre><code>尽量使单个英文，如果必要的话采用驼峰法， 不建议用拼音
@@ -101,12 +100,13 @@
 </ol>
 <ol start="2">
 <li><p>接口类型与业务操作相匹配</p>
-<hr>
+<p> <strong> 方法恰当 </strong>   </p>
 <pre><code>新增 POST
 修改 PUT
 查询 GET
 删除 DELETE
-</code></pre></li>
+</code></pre><p> <strong> 传递参数恰当</strong></p>
+</li>
 </ol>
 <ol start="3">
 <li><p>统一的返回结构（一般为JSON）</p>
@@ -117,6 +117,8 @@ EG:{
     &quot;message&quot;: &quot;SUCESS&quot;,
     &quot;data&quot;:{}
 }
+
+同时动态值一定要有KEY对应。
 </code></pre></li>
 </ol>
 <ol start="4">
@@ -127,12 +129,11 @@ EG:{
 <pre><code>Swagger 是一部分，同时要有规范的接口文档。
 </code></pre></li>
 </ol>
-<pre><code>这样应该能避免一些不必要的沟通。
-</code></pre>
+
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/06/16/前后端接口设计的一些原则/" data-id="cjwyeu7vl0002kcthsdif823h" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/06/16/前后端接口设计的一些原则/" data-id="cjwyf131j00037wth0nae8xje" class="article-share-link">Share</a>
       
       
     </footer>
